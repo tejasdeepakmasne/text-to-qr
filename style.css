@@ -1,0 +1,74 @@
+/* This targets literally every element on the page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: seagreen;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+/* Target all inputs and buttons at the same time */
+input,
+button {
+    font-size: 1.1rem; /* Makes the text inside bigger */
+    padding: 10px 15px; /* 10px top/bottom, 15px left/right */
+    border-radius: 4px; /* Optional: rounds the corners slightly */
+    border: 1px solid #ccc; /* Gives them a clean border */
+}
+
+#main-heading {
+    color: cornsilk;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 10vw;
+}
+
+/* 1. Default (Mobile First): Slightly less than the full screen width */
+/*#text-input-main {
+    width: 70vw;
+}*/
+
+#center-card {
+    width: fit-content;
+    padding: 1vw;
+    background-color: cornsilk;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#button-cluster {
+    display: flex;
+    gap: 15px; /* Creates the space between the buttons themselves */
+    justify-content: center; /* Centers the buttons inside their container */
+    flex-wrap: wrap; /* Pro-tip: allows buttons to wrap to a new line on super tiny phones */
+    width: 100%;
+}
+
+#qr-output:empty {
+    display: none;
+}
+
+#message-space:empty {
+    display: none;
+}
+/* 2. Desktop Rule: If the screen is 768px or wider, switch to 1/3rd width */
+@media (min-width: 768px) {
+    #center-card {
+        width: 50vw;
+    }
+    #text-input-main {
+        width: 40vw;
+    }
+}

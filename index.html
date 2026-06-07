@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Text-to-qr</title>
+    </head>
+    <body>
+        <h1 id="main-heading">Text to qr</h1>
+        <br />
+        <div id="center-card">
+            <input
+                type="text"
+                id="text-input-main"
+                placeholder="Enter text you need to manipulate"
+            />
+            <div id="button-cluster">
+                <button id="qr-generate-button">Create QR</button>
+                <button id="clear-button">Clear</button>
+                <button id="copy-button">Copy QR</button>
+            </div>
+            <div id="qr-output"></div>
+            <div id="message-space"></div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
